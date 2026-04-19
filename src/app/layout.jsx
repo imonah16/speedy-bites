@@ -1,15 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
 import React from 'react';
 import '../tailwind.css';
-import { CartProvider } from '../routes/CartContext';
+import { CartProvider } from '@/app/Context/CartContext';
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
 };
 
+
 export const metadata = {
-  metadataBase: new URL('https://speedy-bites.onrender.com'),
+  metadataBase: new URL('https://speedy-bites-vads.onrender.com'),
   title: 'SpeedyBites — Order Fresh Takeaway in Minutes',
   description:
     'SpeedyBites lets you browse a full menu, customize your order, and check out as a guest — hot food ready fast for collection.',

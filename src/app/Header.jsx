@@ -1,11 +1,7 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import AppLogo from '@/components/ui/AppLogo';
-import Icon from '@/components/ui/AppIcon';
-import { useCart } from '@/context/CartContext';
-
+import React, { useEffect, useState } from 'react';
+import AppLogo from '@/app/ui/AppLogo';
+import Icon from '@/app/ui/AppIcon';
+import { useCart } from '@/app/Context/CartContext';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,15 +10,12 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
 
     return () => {
       document.body.style.overflow = '';
@@ -39,37 +32,37 @@ const Header = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-18">
-            <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="flex items-center justify-between h-16 sm:h-[72px]">
+            <a href="/" className="flex items-center gap-2.5 group">
               <AppLogo size={36} />
               <span className="font-display text-xl tracking-tight text-brand-foreground hidden sm:block">
                 SpeedyBites
               </span>
-            </Link>
+            </a>
 
             <nav className="hidden md:flex items-center gap-8">
-              <Link
+              <a
                 href="/#menu"
                 className="text-sm font-600 text-brand-muted hover:text-brand-foreground transition-colors"
               >
                 Menu
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/#menu"
                 className="text-sm font-600 text-brand-muted hover:text-brand-foreground transition-colors"
               >
                 Deals
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/checkout"
                 className="text-sm font-600 text-brand-muted hover:text-brand-foreground transition-colors"
               >
                 Track Order
-              </Link>
+              </a>
             </nav>
 
             <div className="flex items-center gap-3">
-              <Link
+              <a
                 href="/cart"
                 className="relative flex items-center justify-center w-10 h-10 rounded-full bg-primary-light hover:bg-primary hover:text-white text-primary transition-all duration-200 group"
                 aria-label={`Cart with ${totalItems} items`}
@@ -80,14 +73,14 @@ const Header = () => {
                     {totalItems > 9 ? '9+' : totalItems}
                   </span>
                 )}
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="/"
                 className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-brand-border text-sm font-600 text-brand-foreground hover:border-primary hover:text-primary transition-all duration-200"
               >
                 Sign In
-              </Link>
+              </a>
 
               <button
                 type="button"
@@ -119,7 +112,7 @@ const Header = () => {
                 { label: 'Cart', href: '/cart' },
                 { label: 'Sign In', href: '/' },
               ].map((item) => (
-                <Link
+                <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
@@ -127,7 +120,7 @@ const Header = () => {
                 >
                   {item.label}
                   <Icon name="ChevronRightIcon" size={16} className="text-brand-muted" />
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
