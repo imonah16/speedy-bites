@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Header from '../routes/header';
-import Footer from '../routes/footer';
-import AppImage from '../routes/AppImage';
-import Icon from '../routes/AppIcon';
-import { useCart } from '../routes/CartContext';
+import Header from '../app/Header';
+import Footer from '../app/Footer';
+import AppImage from '../components/ui/AppImage';
+import Icon from '../components/ui/AppIcon';
+import { useCart } from '../context/CartContext';
 
 const menuItems = [
   {

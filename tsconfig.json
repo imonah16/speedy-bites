@@ -2,13 +2,33 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowJs": true,
     "checkJs": false,
     "noEmit": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "strict": false,
+    "incremental": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

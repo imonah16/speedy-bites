@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
-import Icon from '@/components/ui/AppIcon';
+import Icon from '../../components/ui/AppIcon';
 
 const SIZES = [
   { label: 'Regular', price: 11.49, kcal: '680 kcal' },

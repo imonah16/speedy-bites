@@ -1,10 +1,12 @@
 export default function robots() {
+    const baseUrl = 'https://speedy-bites-vads.onrender.com';
+
     return {
         rules: [{
             userAgent: '*',
             allow: '/',
             disallow: ['/api/', '/_next/', '/admin/'],
         }, ],
-        sitemap: 'https://speedy-bites.onrender.com/sitemap.xml',
+        sitemap: `${baseUrl}/sitemap.xml`,
     };
 }

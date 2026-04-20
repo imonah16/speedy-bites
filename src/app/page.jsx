@@ -3,9 +3,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Icon from './ui/AppIcon';
-import AppImage from './ui/AppImage';
-import { useCart } from './Context/CartContext';
+import Icon from '../components/ui/AppIcon';
+import AppImage from '../components/ui/AppImage';
+import { useCart } from '../context/CartContext';
 import { supabase } from '../lib/supabaseClient';
 
 const categoryEmojis = {

@@ -1,13 +1,15 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import Header from '../../../routes/header';
-import Footer from '../../../routes/footer';
+import Header from '../Header';
+import Footer from '../Footer';
 import MenuItemGallery from './MenuItemGallery';
 import MenuItemInfo from './MenuItemInfo';
 import MenuItemCustomizer from './MenuItemCustomizer';
 import MenuItemReviews from './MenuItemReviews';
 import RelatedItems from './RelatedItems';
-import Icon from '../../../routes/AppIcon';
+import Icon from '../../components/ui/AppIcon';
 
 export default function MenuItemPage() {
   return (

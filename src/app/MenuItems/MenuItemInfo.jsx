@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Icon from '../../../routes/AppIcon';
+import Icon from '../../components/ui/AppIcon';
 
 const MenuItemInfo = () => {
   const [isWishlisted, setIsWishlisted] = useState(false);

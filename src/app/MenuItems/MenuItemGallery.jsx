@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
-import AppImage from '../../../routes/AppImage';
-import Icon from '../../../routes/AppIcon';
+import AppImage from '../../components/ui/AppImage';
+import Icon from '../../components/ui/AppIcon';
 
 const galleryImages = [
   {

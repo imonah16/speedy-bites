@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://speedy-bites.onrender.com';
+    const baseUrl = 'https://speedy-bites-vads.onrender.com';
 
     return [{
             url: `${baseUrl}/`,
