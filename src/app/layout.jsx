@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import './tailwind.css';
-import { CartProvider } from '@/context/CartContext';
+import { CartProvider } from '../context/CartContext';
 
 export const viewport = {
   width: 'device-width',
