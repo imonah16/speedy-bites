@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import AppLogo from '@/components/ui/AppLogo';
-import Icon from '@/components/ui/AppIcon';
-import { useCart } from '@/context/CartContext';
+import AppLogo from '../components/ui/AppLogo';
+import Icon from '../components/ui/AppIcon';
+import { useCart } from '../context/CartContext';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
