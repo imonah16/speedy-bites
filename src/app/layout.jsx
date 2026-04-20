@@ -1,13 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
-import React from 'react';
-import '../tailwind.css';
-import { CartProvider } from '@/app/Context/CartContext';
+import './tailwind.css';
+import { CartProvider } from '@/context/CartContext';
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
 };
-
 
 export const metadata = {
   metadataBase: new URL('https://speedy-bites-vads.onrender.com'),
@@ -24,17 +21,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-brand-bg">
         <CartProvider>{children}</CartProvider>
-
-        <script
-          type="module"
-          async
-          src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fspeedybite9540back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18"
-        />
-        <script
-          type="module"
-          defer
-          src="https://static.rocket.new/rocket-shot.js?v=0.0.2"
-        />
       </body>
     </html>
   );

@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* Theme variables */
+
+:root {
+    --color-primary: #E8460A;
+    --color-primary-hover: #D03D08;
+    --color-accent: #F59E0B;
+    --color-bg: #FAFAF8;
+    --color-surface: #FFFFFF;
+    --color-foreground: #1C1917;
+    --color-muted: #78716C;
+    --color-border: #E7E5E4;
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+
+/* Base */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply antialiased;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-foreground);
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+
+/* Reusable tokens (used by your components) */
+
+.bg-brand-bg {
+    background-color: var(--color-bg);
+}
+
+.bg-brand-surface {
+    background-color: var(--color-surface);
+}
+
+.text-brand-foreground {
+    color: var(--color-foreground);
+}
+
+.text-brand-muted {
+    color: var(--color-muted);
+}
+
+.border-brand-border {
+    border-color: var(--color-border);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+    background-color: rgba(232, 70, 10, 0.1);
+}
+
+
+/* Utilities */
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/* Buttons */
+
+.btn-primary {
+    background: linear-gradient(135deg, #E8460A 0%, #C73A08 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.9rem 1.8rem;
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #D03D08 0%, #B83306 100%);
+}
+
+
+/* Inputs */
+
+.form-input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: #fff;
+    font-size: 0.9rem;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(232, 70, 10, 0.12);
+    outline: none;
+}
+
+
+/* Simple animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
