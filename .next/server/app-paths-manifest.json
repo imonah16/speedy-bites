@@ -1,6 +1,7 @@
 {
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/menu-item/page": "app/menu-item/page.js",
   "/page": "app/page.js"
 }

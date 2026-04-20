@@ -1,18 +1,21 @@
 'use client';
 
 import React, { useRef } from 'react';
-import AppImage from './AppImage';
-import Icon from './AppIcon';
+import Link from 'next/link';
+import AppImage from '../../components/ui/AppImage';
+import Icon from '../../components/ui/AppIcon';
 
 const relatedItems = [
   {
     id: 1,
     name: 'Pepperoni Feast',
-    description: 'Loaded with double pepperoni, mozzarella, tomato sauce and a drizzle of chilli oil',
+    description:
+      'Loaded with double pepperoni, mozzarella, tomato sauce and a drizzle of chilli oil',
     price: 13.49,
     rating: 4.9,
     reviews: 218,
-    image: 'https://img.rocket.new/generatedImages/rocket_gen_img_1879a5394-1773160898008.png',
+    image:
+      'https://img.rocket.new/generatedImages/rocket_gen_img_1879a5394-1773160898008.png',
     alt: 'Pepperoni pizza loaded with double pepperoni slices and melted mozzarella on crispy base',
     badge: '⭐ Top Rated',
     prepTime: '20–30 min',
@@ -20,11 +23,13 @@ const relatedItems = [
   {
     id: 2,
     name: 'Classic Buffalo Wings',
-    description: '8 crispy chicken wings tossed in tangy buffalo sauce, served with blue cheese dip',
+    description:
+      '8 crispy chicken wings tossed in tangy buffalo sauce, served with blue cheese dip',
     price: 9.99,
     rating: 4.8,
     reviews: 175,
-    image: 'https://img.rocket.new/generatedImages/rocket_gen_img_1c39b8004-1773192310795.png',
+    image:
+      'https://img.rocket.new/generatedImages/rocket_gen_img_1c39b8004-1773192310795.png',
     alt: 'Crispy buffalo chicken wings coated in tangy red sauce served with blue cheese dip and celery sticks',
     badge: '🔥 Bestseller',
     prepTime: '15–22 min',
@@ -36,7 +41,8 @@ const relatedItems = [
     price: 7.49,
     rating: 4.9,
     reviews: 211,
-    image: 'https://img.rocket.new/generatedImages/rocket_gen_img_11f60102a-1772419526645.png',
+    image:
+      'https://img.rocket.new/generatedImages/rocket_gen_img_11f60102a-1772419526645.png',
     alt: 'Loaded fries topped with pulled beef, melted cheese sauce and fresh spring onions in paper tray',
     badge: '⭐ Top Rated',
     prepTime: '10–15 min',
@@ -56,7 +62,8 @@ const relatedItems = [
   {
     id: 5,
     name: 'Honey Garlic Wings',
-    description: '8 wings glazed in sticky honey garlic sauce, sesame seeds, spring onions',
+    description:
+      '8 wings glazed in sticky honey garlic sauce, sesame seeds, spring onions',
     price: 10.49,
     rating: 4.7,
     reviews: 88,
@@ -131,7 +138,7 @@ const RelatedItems = () => {
         style={{ scrollPaddingLeft: '0px' }}
       >
         {relatedItems.map((item, idx) => (
-          <a
+          <Link
             key={item.id}
             href="/menu-item"
             className="snap-start shrink-0 w-[240px] sm:w-[260px] bg-white rounded-2xl overflow-hidden border border-brand-border shadow-card card-hover group animate-fade-slide-up"
@@ -186,18 +193,12 @@ const RelatedItems = () => {
                   <span className="text-base font-700 text-brand-foreground">
                     £{item.price.toFixed(2)}
                   </span>
-
-                  {item.originalPrice && (
-                    <span className="text-xs text-brand-muted line-through">
-                      £{item.originalPrice.toFixed(2)}
-                    </span>
-                  )}
                 </div>
 
                 <span className="text-xs font-700 text-primary">View →</span>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
